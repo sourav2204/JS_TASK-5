@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Js_Task-5</title>
+
+    <script>
+      function reverse() {
+        var num = parseInt(document.getElementById("input").value);
+
+        var rev = 0;
+        while (num != 0) {
+          var d = num % 10;
+          rev = rev * 10 + d;
+          num = Math.floor(num / 10);
+        }
+        document.getElementById("answer").innerHTML = "Reverse: " + rev;
+      }
+    </script>
+  </head>
+
+  <body>
+    <label for="number">Input Number: </label>
+    <input type="text" name="number" id="input" />
+    <br />
+    <input type="button" value="Reverse" onclick="reverse()" />
+    <p id="answer"></p>
+  </body>
+</html>
+<!--Coded by Sourav-->
